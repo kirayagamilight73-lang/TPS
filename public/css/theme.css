@@ -1,0 +1,63 @@
+
+body {
+    background-color: #121212; /* dark background */
+    color: #f5f5f5; /* light text */
+}
+
+.navbar {
+    background-color: #000 !important;
+}
+.navbar a {
+    color: #ff3b3b !important; /* red links */
+}
+.navbar a:hover {
+    color: #ffffff !important; /* white on hover */
+}
+
+.table {
+    background-color: #1a1a1a !important; /* dark rows */
+    color: #f5f5f5 !important;
+    border-color: #333 !important;
+}
+.table th {
+    background-color: #ff3b3b !important; /* red headers */
+    color: #fff !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #2b2b2b !important; /* alternate row */
+}
+.table-striped tbody tr:hover {
+    background-color: #3a3a3a !important; /* hover effect */
+}
+
+.btn {
+    border-radius: 6px;
+    font-weight: bold;
+}
+.btn-primary, .btn-success, .btn-info {
+    background-color: #ff3b3b !important;
+    border-color: #ff3b3b !important;
+    color: #fff !important;
+}
+.btn-primary:hover, .btn-success:hover, .btn-info:hover {
+    background-color: #cc0000 !important;
+    border-color: #cc0000 !important;
+}
+.btn-danger {
+    background-color: #660000 !important;
+    border-color: #660000 !important;
+}
+.btn-danger:hover {
+    background-color: #990000 !important;
+    border-color: #990000 !important;
+}
+
+input, select, textarea {
+    background-color: #1a1a1a !important;
+    color: #f5f5f5 !important;
+    border: 1px solid #ff3b3b !important;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #ff3b3b !important;
+    box-shadow: 0 0 5px #ff3b3b !important;
+}
