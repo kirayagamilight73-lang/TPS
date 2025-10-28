@@ -32,6 +32,7 @@ Here are the necessary tools that needs to be installed:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/kirayagamilight73-lang/TPS.git
+   ```
 2. cd TPS
 3. composer install
 4. cp .env.example .env
@@ -49,6 +50,7 @@ Here are the necessary tools that needs to be installed:
 
 ### Screenshots or Code snippets
 #### Routes
+``` php
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -62,8 +64,10 @@ Route::get('/', function () {
 Route::resource('sections', SectionController::class);
 Route::resource('students', StudentController::class);
 Route::get('sections/{section}/students', [SectionController::class, 'students'])->name('sections.students');
+```
 
 #### Section Controller
+``` php
 <?php
 
 namespace App\Http\Controllers;
@@ -146,8 +150,10 @@ class SectionController extends Controller
         return view('sections.students', compact('section', 'students'));
     }
 }
+```
 
 #### Student Controller
+``` php
 <?php
 
 namespace App\Http\Controllers;
@@ -230,8 +236,11 @@ class SectionController extends Controller
         return view('sections.students', compact('section', 'students'));
     }
 }
+```
+
 
 #### Relationship of Student and Section Models
+``` php
 <?php
 
 namespace App\Models;
@@ -248,8 +257,10 @@ class Section extends Model
         return $this->hasMany(Student::class);
     }
 }
+```
 
 #### Create Student
+``` php
 @extends('layouts.app')
 
 @section('content')
@@ -281,9 +292,10 @@ class Section extends Model
     <a href="{{ route('students.index') }}" class="btn btn-secondary">Back</a>
 </form>
 @endsection
-
+```
 
 #### Edit Student
+``` php
 @extends('layouts.app')
 
 @section('content')
@@ -315,8 +327,10 @@ class Section extends Model
     <a href="{{ route('students.index') }}" class="btn btn-secondary">Back</a>
 </form>
 @endsection
+```
 
 #### View Students
+``` php
 @extends('layouts.app')
 
 @section('content')
@@ -350,8 +364,10 @@ class Section extends Model
     @endforeach
 </table>
 @endsection
+```
 
 #### Create Sections
+``` php
 @extends('layouts.app')
 
 @section('content')
@@ -366,8 +382,10 @@ class Section extends Model
     <a href="{{ route('sections.index') }}" class="btn btn-secondary">Back</a>
 </form>
 @endsection
+```
 
 #### Edit Sections
+``` php
 @extends('layouts.app')
 
 @section('content')
@@ -383,8 +401,10 @@ class Section extends Model
     <a href="{{ route('sections.index') }}" class="btn btn-secondary">Back</a>
 </form>
 @endsection
+```
 
 #### View Sections
+``` php
 @extends('layouts.app')
 
 @section('content')
@@ -413,8 +433,10 @@ class Section extends Model
     @endforeach
 </table>
 @endsection
+```
 
 #### View Students in Section
+``` php
 @extends('layouts.app')
 
 @section('content')
@@ -443,8 +465,10 @@ class Section extends Model
 <p>No students in this section yet.</p>
 @endif
 @endsection
+```
 
 #### Student Migration
+``` php
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -476,9 +500,11 @@ return new class extends Migration
         Schema::dropIfExists('students');
     }
 };
+```
 
 
 #### Section Migrations
+``` php
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -507,7 +533,7 @@ return new class extends Migration
         Schema::dropIfExists('sections');
     }
 };
-
+```
 
 ## Contributors
 - Neil Basti A. Benitez
